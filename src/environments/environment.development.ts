@@ -3,8 +3,7 @@ export const environment = {
     firebase: {
         apiKey: "AIzaSyCPCrTrktqPp3dW8ES2I3YekCN8Vnaz76w",
         authDomain: "parano-ia.firebaseapp.com",
-        //databaseURL: "https://parano-ia.firebaseio.com",
-        //darabaseUrl: "https://parano-ia-default-rtdb.europe-west1.firebasedatabase.app",
+        databaseURL: "https://parano-ia-default-rtdb.europe-west1.firebasedatabase.app",
         projectId: "parano-ia",
         storageBucket: "parano-ia.appspot.com",
         messagingSenderId: "336019744094",

@@ -1,0 +1,16 @@
+<div class="w-[100vw] h-[100vh] flex items-center justify-center">
+    <div class="bg-white rounded-lg p-10">
+        <form>
+            <div class="mb-5">
+                <input ngModel [(ngModel)]="name" type="text" name="name"
+                    class="bg-gray-100 border border-gray-500 text-sm rounded-lg w-full p-2.5"
+                    placeholder="Nom du joueur" required />
+            </div>
+            <div *ngIf="error != ''" class="flex items-start mb-5 text-red-500">
+                <p>{{ error }}</p>
+            </div>
+            <button (click)="onSubmit()" type="submit"
+                class="text-white bg-gray-500 hover:bg-gray-800 rounded-lg text-sm w-full py-2.5 text-center">JOUER</button>
+        </form>
+    </div>
+</div>
