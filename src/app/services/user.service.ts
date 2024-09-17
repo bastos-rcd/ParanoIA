@@ -11,6 +11,10 @@ export class UserService {
     private db: AngularFireDatabase
   ) { }
 
+  public getUser(name: string): Observable<any> {
+    return this.db.object("users/" + name).valueChanges();
+  }
+
   public getUsers(): Observable<any[]> {
     return this.db.list("users").valueChanges();
   }

@@ -1,7 +1,25 @@
 <div class="h-[100vh]">
     <app-menu></app-menu>
 
-    <div class="h-[92%] w-[100vw]">
-        vnjvj
+    <app-progress></app-progress>
+
+    <div class="h-auto w-[100vw] flex justify-center items-center mt-20">
+        <div class="w-[80%] h-auto bg-neutral-600 rounded-xl border border-neutra-400 p-4">
+            <div class="flex flex-row justify-between">
+                <h1 class="text-center text-xl font-bold" [class]="{
+                    'text-blue-400': !user.getRole() && isShowing,
+                    'text-red-400': user.getRole() && isShowing,
+                    'text-neutral-400': !isShowing,
+                }">
+                    {{ user.getName() }}
+                </h1>
+                <button (click)="onShow()">
+                    <i *ngIf="isShowing" class="fa-solid fa-eye fa-xl" style="color: #B3C4FF;"></i>
+                    <i *ngIf="!isShowing" class="fa-solid fa-eye-slash fa-xl" style="color: #B3C4FF;"></i>
+                </button>
+            </div>
+            <!-- TODO : Crewmate -->
+            <!-- TODO : Impostor -->
+        </div>
     </div>
 </div>
