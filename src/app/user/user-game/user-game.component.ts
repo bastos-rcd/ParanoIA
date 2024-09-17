@@ -5,6 +5,7 @@ import { ProgressComponent } from '../../game/progress/progress.component';
 import { CommonModule } from '@angular/common';
 import { UserService } from '../../services/user.service';
 import { User } from '../../models/user';
+import { CrewmateComponent } from '../crewmate/crewmate.component';
 
 @Component({
   selector: 'app-user-game',
@@ -12,6 +13,7 @@ import { User } from '../../models/user';
   imports: [
     MenuComponent,
     ProgressComponent,
+    CrewmateComponent,
     CommonModule
   ],
   templateUrl: './user-game.component.html',

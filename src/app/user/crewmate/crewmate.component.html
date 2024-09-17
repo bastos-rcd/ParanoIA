@@ -1,0 +1,4 @@
+<div class="w-[100%] h-auto flex flex-wrap justify-center mt-14">
+    <a *ngFor="let task of user.getTasks()" href="/task/{{ task }}" class="bg-blue-400 rounded-full p-2 m-2">{{ task
+        }}</a>
+</div>
