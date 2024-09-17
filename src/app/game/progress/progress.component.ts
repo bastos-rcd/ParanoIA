@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Game } from '../../models/game';
+import { GameService } from '../../services/game.service';
 
 @Component({
   selector: 'app-progress',
@@ -9,9 +11,19 @@ import { Component } from '@angular/core';
 })
 
 export class ProgressComponent {
-  constructor() { }
+  public game: Game = new Game(0, 0);
+
+  constructor(
+    private gameService: GameService
+  ) { }
+
+  ngOnInit(): void {
+    this.gameService.getGame().subscribe(data => {
+      this.game = new Game(data.done, data.todo);
+    });
+  }
 
   public getProgress(): number {
-    return 40;
+    return this.game.getDone() / this.game.getTodo() * 100;
   }
 }

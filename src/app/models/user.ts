@@ -1,7 +1,7 @@
 export class User {
-    private name: string = '';
-    private role: boolean = false;
-    private tasks: string = '';
+    private name: string;
+    private role: boolean;
+    private tasks: string;
 
     constructor(name: string, role: boolean, tasks: string) {
         this.name = name;
