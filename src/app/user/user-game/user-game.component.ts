@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { UserService } from '../../services/user.service';
 import { User } from '../../models/user';
 import { CrewmateComponent } from '../crewmate/crewmate.component';
+import { ImpostorComponent } from '../impostor/impostor.component';
 
 @Component({
   selector: 'app-user-game',
@@ -14,6 +15,7 @@ import { CrewmateComponent } from '../crewmate/crewmate.component';
     MenuComponent,
     ProgressComponent,
     CrewmateComponent,
+    ImpostorComponent,
     CommonModule
   ],
   templateUrl: './user-game.component.html',

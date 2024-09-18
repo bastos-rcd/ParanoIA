@@ -4,7 +4,7 @@
     <app-progress></app-progress>
 
     <div class="h-auto w-[100vw] flex justify-center items-center mt-20">
-        <div class="w-[80%] h-60 bg-[url('/among-us.jpg')] bg-cover bg-top rounded-xl border border-neutra-400 p-4">
+        <div class="w-[80%] h-auto bg-[url('/among-us.jpg')] bg-cover bg-top rounded-xl border border-neutra-400 p-4">
             <div class="flex flex-row justify-between">
                 <h1 class="text-center text-xl font-bold" [class]="{
                     'text-blue-400': !user.getRole() && isShowing,
@@ -19,7 +19,7 @@
                 </button>
             </div>
             <app-crewmate *ngIf="isShowing && !user.getRole()" [user]="user"></app-crewmate>
-            <!-- TODO : Impostor -->
+            <app-impostor *ngIf="isShowing && user.getRole()" [user]="user"></app-impostor>
         </div>
     </div>
 </div>
