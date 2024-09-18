@@ -1,0 +1,11 @@
+<app-menu></app-menu>
+
+<nav class="h-auto w-[100%] flex flex-wrap items-center justify-center mt-4 p-4">
+    <h1 class="text-white text-xl">
+        Tâche n°{{ numTask }} : {{ tasksName[numTask-1] }}
+    </h1>
+</nav>
+
+<div [ngSwitch]="numTask">
+    <app-task-1 *ngSwitchCase="1"></app-task-1>
+</div>
