@@ -8,5 +8,8 @@ export const environment = {
         storageBucket: "parano-ia.appspot.com",
         messagingSenderId: "336019744094",
         appId: "1:336019744094:web:216494f226c4d38aa85bcf"
+    },
+    randomChoice(array: string[]): string {
+        return array[Math.floor(array.length * Math.random())];
     }
 };
