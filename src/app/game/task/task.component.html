@@ -7,5 +7,5 @@
 </nav>
 
 <div [ngSwitch]="numTask">
-    <app-task-1 *ngSwitchCase="1"></app-task-1>
+    <app-task-1 *ngSwitchCase="1" [numTask]="numTask"></app-task-1>
 </div>

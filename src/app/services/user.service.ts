@@ -18,4 +18,17 @@ export class UserService {
   public getUsers(): Observable<any[]> {
     return this.db.list("users").valueChanges();
   }
+
+  public removeTask(name: string, task: number) {
+    const user = this.db.object("users/" + name + "/tasks");
+
+    user.query.ref.transaction(data => {
+      if (data) {
+        const tasks = (data as string).split('-').map(Number);
+        const temp = tasks.filter(t => t !== task);
+        const newTasks = temp.join('-');
+        user.set(newTasks);
+      }
+    });
+  }
 }

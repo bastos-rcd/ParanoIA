@@ -11,7 +11,7 @@ import { GameService } from '../../services/game.service';
 })
 
 export class ProgressComponent {
-  public game: Game = new Game(0, 0);
+  public game: Game = new Game(0, 1);
 
   constructor(
     private gameService: GameService
