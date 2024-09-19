@@ -1,0 +1,18 @@
+<div class="w-[80vw] h-auto bg-neutral-600 rounded-lg flex flex-col justify-center items-center mt-20 mx-[10%] p-4">
+    <div class="w-full flex flex-row flex-nowrap justify-between mt-4">
+        <span class="bg-orange-400 rounded-full text-white px-1">{{ orangeResult }}%</span>
+        <span class="bg-green-400 rounded-full text-white px-1">{{ greenResult }}%</span>
+        <span class="bg-red-400 rounded-full text-white px-1">{{ redResult }}%</span>
+    </div>
+    <div class="w-full bg-orange-400 rounded-full flex flex-col flex-nowrap mt-4 p-2">
+        <input type="range" [value]="orange" [disabled]="orange == orangeResult" (input)="onChangeOrange($event)">
+    </div>
+    <div class="w-full bg-green-400 rounded-full flex flex-col flex-nowrap mt-4 p-2">
+        <input type="range" [value]="green" [disabled]="green == greenResult" (input)="onChangeGreen($event)">
+    </div>
+    <div class="w-full bg-red-400 rounded-full flex flex-col flex-nowrap mt-4 p-2">
+        <input type="range" [value]="red" [disabled]="red == redResult" (input)="onChangeRed($event)">
+    </div>
+    <app-update *ngIf="orange == orangeResult && green == greenResult && red == redResult"
+        [numTask]="numTask"></app-update>
+</div>
