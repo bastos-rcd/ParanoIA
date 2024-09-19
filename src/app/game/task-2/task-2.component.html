@@ -1,0 +1,5 @@
+<div class="w-[80vw] h-auto bg-neutral-600 rounded-lg flex flex-col justify-center items-center mt-20 mx-[10%] p-4">
+    <img *ngIf="!isWin" (click)="onTurnOn()" src="/light-off.png" class="max-w-[40%]">
+    <img *ngIf="isWin" src="/light-on.png" class="max-w-[40%]">
+    <app-update *ngIf="isWin" [numTask]="numTask"></app-update>
+</div>

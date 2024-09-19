@@ -5,6 +5,7 @@ import { User } from '../../models/user';
 import { UserService } from '../../services/user.service';
 import { CommonModule } from '@angular/common';
 import { Task1Component } from '../task-1/task-1.component';
+import { Task2Component } from '../task-2/task-2.component';
 
 @Component({
   selector: 'app-task',
@@ -12,6 +13,7 @@ import { Task1Component } from '../task-1/task-1.component';
   imports: [
     MenuComponent,
     Task1Component,
+    Task2Component,
     CommonModule
   ],
   templateUrl: './task.component.html',
