@@ -1,0 +1,28 @@
+<div class="w-[80vw] h-auto bg-neutral-600 rounded-lg flex flex-col justify-center items-center mt-20 mx-[10%] p-4">
+    <div class="w-full flex flex-row justify-center mt-4">
+        <div class="w-[50px] h-[50px] rounded-lg flex flex-row justify-center items-center" [ngClass]="{
+            'bg-blue-400': blue,
+            'bg-orange-400': orange,
+            'bg-red-400': red,
+            'bg-green-400': green
+        }">
+            <i class="fa-solid fa-brain fa-2xl"></i>
+        </div>
+    </div>
+    <div class="w-full flex flex-col justify-center mt-4">
+        <div class="w-full flex flex-row justify-around">
+            <button type="button" class="w-[75px] h-[75px] bg-blue-400 rounded-lg" [disabled]="isPlaying"
+                (click)="clickColor('blue')"></button>
+            <button type="button" class="w-[75px] h-[75px] bg-red-400 rounded-lg" [disabled]="isPlaying"
+                (click)="clickColor('red')"></button>
+        </div>
+        <div class="h-10"></div>
+        <div class="w-full flex flex-row justify-around">
+            <button type="button" class="w-[75px] h-[75px] bg-orange-400 rounded-lg" [disabled]="isPlaying"
+                (click)="clickColor('orange')"></button>
+            <button type="button" class="w-[75px] h-[75px] bg-green-400 rounded-lg" [disabled]="isPlaying"
+                (click)="clickColor('green')"></button>
+        </div>
+    </div>
+    <app-update *ngIf="isWin" [numTask]="numTask"></app-update>
+</div>
