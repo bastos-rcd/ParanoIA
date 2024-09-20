@@ -1,0 +1,16 @@
+<div class="w-[80vw] h-auto bg-neutral-600 rounded-lg flex flex-col justify-center items-center mt-20 mx-[10%] p-4">
+    <h1 class="text-white px-2 mt-4">
+        <i class="{{ image }}" style="color: #74C0FC;"></i>
+    </h1>
+    <div *ngIf="!isWin" class="w-full flex flex-row flex-wrap justify-center items-center mt-4">
+        <button class="bg-neutral-400 rounded-lg p-2 m-2" (click)="onClickWord(0)">VOITURE</button>
+        <button class="bg-neutral-400 rounded-lg p-2 m-2" (click)="onClickWord(1)">CAROTTE</button>
+        <button class="bg-neutral-400 rounded-lg p-2 m-2" (click)="onClickWord(2)">CACA</button>
+        <button class="bg-neutral-400 rounded-lg p-2 m-2" (click)="onClickWord(3)">CLÉ</button>
+        <button class="bg-neutral-400 rounded-lg p-2 m-2" (click)="onClickWord(4)">ARBRE</button>
+        <button class="bg-neutral-400 rounded-lg p-2 m-2" (click)="onClickWord(5)">FLOCON</button>
+        <button class="bg-neutral-400 rounded-lg p-2 m-2" (click)="onClickWord(6)">LUNETTES</button>
+        <button class="bg-neutral-400 rounded-lg p-2 m-2" (click)="onClickWord(7)">PIZZA</button>
+    </div>
+    <app-update *ngIf="isWin" [numTask]="numTask"></app-update>
+</div>
