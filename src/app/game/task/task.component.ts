@@ -17,6 +17,7 @@ import { Task10Component } from '../task-10/task-10.component';
 import { Task11Component } from '../task-11/task-11.component';
 import { Task12Component } from '../task-12/task-12.component';
 import { Task13Component } from '../task-13/task-13.component';
+import { Task14Component } from '../task-14/task-14.component';
 
 @Component({
   selector: 'app-task',
@@ -36,6 +37,7 @@ import { Task13Component } from '../task-13/task-13.component';
     Task11Component,
     Task12Component,
     Task13Component,
+    Task14Component,
     CommonModule
   ],
   templateUrl: './task.component.html',

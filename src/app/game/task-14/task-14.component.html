@@ -1,0 +1,16 @@
+<div class="w-[80vw] h-auto bg-neutral-600 rounded-lg flex flex-col justify-center items-center mt-20 mx-[10%] p-4">
+    <h1 class="text-white text-sm">
+        Quel est le plus grand désert du monde ?
+    </h1>
+    <div class="w-full flex flex-col mt-4">
+        <div class="w-full flex flex-row flex-nowrap justify-between">
+            <button class="w-2/5 bg-neutral-400 rounded-lg p-1" (click)="onAnswer('Sahara')">Sahara</button>
+            <button class="w-2/5 bg-neutral-400 rounded-lg p-1" (click)="onAnswer('Gobi')">Gobi</button>
+        </div>
+        <div class="w-full flex flex-row flex-nowrap justify-between mt-4">
+            <button class="w-2/5 bg-neutral-400 rounded-lg p-1" (click)="onAnswer('Antarctique')">Antarctique</button>
+            <button class="w-2/5 bg-neutral-400 rounded-lg p-1" (click)="onAnswer('Kalahari')">Kalahari</button>
+        </div>
+    </div>
+    <app-update *ngIf="isWin" [numTask]="numTask"></app-update>
+</div>
