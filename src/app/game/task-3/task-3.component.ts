@@ -13,8 +13,7 @@ import { UpdateComponent } from '../update/update.component';
   styleUrl: './task-3.component.css'
 })
 export class Task3Component {
-  @Input()
-  public numTask: number = 0;
+  public numTask: number = 3;
 
   public isWin: boolean = false;
 

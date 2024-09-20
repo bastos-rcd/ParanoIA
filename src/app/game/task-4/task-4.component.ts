@@ -17,8 +17,7 @@ import { CdkDragDrop, DragDropModule, moveItemInArray, transferArrayItem } from 
 })
 
 export class Task4Component {
-  @Input()
-  public numTask: number = 0;
+  public numTask: number = 4;
 
   public isWin: boolean = false;
 

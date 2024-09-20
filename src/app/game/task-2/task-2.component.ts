@@ -13,8 +13,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './task-2.component.css'
 })
 export class Task2Component {
-  @Input()
-  public numTask: number = 0;
+  public numTask: number = 2;
 
   public isWin: boolean = false;
 

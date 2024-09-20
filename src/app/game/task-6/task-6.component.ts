@@ -16,8 +16,7 @@ import { FormsModule } from '@angular/forms';
 })
 
 export class Task6Component {
-  @Input()
-  public numTask: number = 0;
+  public numTask: number = 6;
 
   public isWin: boolean = false;
 

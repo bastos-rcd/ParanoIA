@@ -16,8 +16,7 @@ import { UpdateComponent } from '../update/update.component';
 })
 
 export class Task1Component {
-  @Input()
-  public numTask: number = 0;
+  public numTask: number = 1;
 
   public code: number = 0;
   public codeToFind: number = Math.floor(Math.random() * 10000);

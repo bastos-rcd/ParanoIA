@@ -15,8 +15,7 @@ import { environment } from '../../../environments/environment';
 })
 
 export class Task5Component {
-  @Input()
-  public numTask: number = 0;
+  public numTask: number = 5;
 
   public isWin: boolean = false;
 

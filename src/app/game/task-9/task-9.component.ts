@@ -14,8 +14,7 @@ import { UpdateComponent } from '../update/update.component';
 })
 
 export class Task9Component {
-  @Input()
-  public numTask: number = 0;
+  public numTask: number = 9;
 
   public value: number = 0;
 

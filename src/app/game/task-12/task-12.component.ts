@@ -14,8 +14,7 @@ import { UpdateComponent } from '../update/update.component';
 })
 
 export class Task12Component {
-  @Input()
-  public numTask: number = 0;
+  public numTask: number = 12;
 
   public isWin: boolean = false;
 
