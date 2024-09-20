@@ -1,0 +1,41 @@
+<div class="w-[80vw] h-auto bg-neutral-600 rounded-lg flex flex-col justify-center items-center mt-20 mx-[10%] p-4">
+    <div *ngIf="!isWin" class="w-full flex flex-col p-2 mt-4">
+        <div class="w-full flex flex-row">
+            <div class="w-[50px]"></div>
+            <button *ngIf="cibles[0]" type="button" class="btn" (click)="onShootCible(0)">
+                <i class="fa-solid fa-crosshairs fa-2xl" style="color: #e32400;"></i>
+            </button>
+        </div>
+        <div class="w-full flex flex-row mt-4">
+            <button *ngIf="cibles[1]" type="button" class="btn" (click)="onShootCible(1)">
+                <i class="fa-solid fa-crosshairs fa-2xl" style="color: #e32400;"></i>
+            </button>
+            <div class="w-[150px]"></div>
+            <button *ngIf="cibles[2]" type="button" class="btn" (click)="onShootCible(2)">
+                <i class="fa-solid fa-crosshairs fa-2xl" style="color: #e32400;"></i>
+            </button>
+        </div>
+        <div class="w-full flex flex-row mt-4">
+            <div class="w-[50px]"></div>
+            <button *ngIf="cibles[3]" type="button" class="btn" (click)="onShootCible(3)">
+                <i class="fa-solid fa-crosshairs fa-2xl" style="color: #e32400;"></i>
+            </button>
+            <button *ngIf="cibles[4]" type="button" class="btn" (click)="onShootCible(4)">
+                <i class="fa-solid fa-crosshairs fa-2xl" style="color: #e32400;"></i>
+            </button>
+        </div>
+        <div class="w-full flex flex-row mt-4">
+            <button *ngIf="cibles[5]" type="button" class="btn" (click)="onShootCible(5)">
+                <i class="fa-solid fa-crosshairs fa-2xl" style="color: #e32400;"></i>
+            </button>
+            <div class="w-[100px]"></div>
+            <button *ngIf="cibles[6]" type="button" class="btn" (click)="onShootCible(6)">
+                <i class="fa-solid fa-crosshairs fa-2xl" style="color: #e32400;"></i>
+            </button>
+            <button *ngIf="cibles[7]" type="button" class="btn" (click)="onShootCible(7)">
+                <i class="fa-solid fa-crosshairs fa-2xl" style="color: #e32400;"></i>
+            </button>
+        </div>
+    </div>
+    <app-update *ngIf="isWin" [numTask]="numTask"></app-update>
+</div>
