@@ -1,0 +1,50 @@
+<div class="w-[80vw] h-auto bg-neutral-600 rounded-lg flex flex-col justify-center items-center mt-20 mx-[10%] p-4">
+    <h1 class="text-white text-base mt-4">
+        Le motif à refaire est : <i class="fa-solid fa-plus"></i>
+    </h1>
+    <div *ngIf="!isWin" class="w-full flex flex-col justify-center mt-4">
+        <div class="flex flex-row flex-nowrap justify-center">
+            <button type="button" class="w-[50px] h-[50px]" [ngClass]="{
+                'bg-blue-400': cases[0],
+                'bg-neutral-400': !cases[0]
+            }" (click)="onClick(0)"></button>
+            <button type="button" class="w-[50px] h-[50px]" [ngClass]="{
+                'bg-blue-400': cases[1],
+                'bg-neutral-400': !cases[1]
+            }" (click)="onClick(1)"></button>
+            <button type="button" class="w-[50px] h-[50px]" [ngClass]="{
+                'bg-blue-400': cases[2],
+                'bg-neutral-400': !cases[2]
+            }" (click)="onClick(2)"></button>
+        </div>
+        <div class="flex flex-row flex-nowrap justify-center">
+            <button type="button" class="w-[50px] h-[50px]" [ngClass]="{
+                'bg-blue-400': cases[3],
+                'bg-neutral-400': !cases[3]
+            }" (click)="onClick(3)"></button>
+            <button type="button" class="w-[50px] h-[50px]" [ngClass]="{
+                'bg-blue-400': cases[4],
+                'bg-neutral-400': !cases[4]
+            }" (click)="onClick(4)"></button>
+            <button type="button" class="w-[50px] h-[50px]" [ngClass]="{
+                'bg-blue-400': cases[5],
+                'bg-neutral-400': !cases[5]
+            }" (click)="onClick(5)"></button>
+        </div>
+        <div class="flex flex-row flex-nowrap justify-center">
+            <button type="button" class="w-[50px] h-[50px]" [ngClass]="{
+                'bg-blue-400': cases[6],
+                'bg-neutral-400': !cases[6]
+            }" (click)="onClick(6)"></button>
+            <button type="button" class="w-[50px] h-[50px]" [ngClass]="{
+                'bg-blue-400': cases[7],
+                'bg-neutral-400': !cases[7]
+            }" (click)="onClick(7)"></button>
+            <button type="button" class="w-[50px] h-[50px]" [ngClass]="{
+                'bg-blue-400': cases[8],
+                'bg-neutral-400': !cases[8]
+            }" (click)="onClick(8)"></button>
+        </div>
+    </div>
+    <app-update *ngIf="isWin" [numTask]="numTask"></app-update>
+</div>
