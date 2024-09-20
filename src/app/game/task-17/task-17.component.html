@@ -1,0 +1,10 @@
+<div class="w-[80vw] h-auto bg-neutral-600 rounded-lg flex flex-col justify-center items-center mt-20 mx-[10%] p-4">
+    <div class="w-full flex flex-row justify-center">
+        <img src="/computer.png" class="">
+    </div>
+    <div class="w-full h-auto">
+        <div class="bg-green-400 h-auto rounded-lg text-white text-center text-base" [style.width.%]="progress"
+            [attr.aria-valuenow]="progress" aria-valuemin="0" aria-valuemax="100">{{ progress }}%</div>
+    </div>
+    <app-update *ngIf="isWin" [numTask]="numTask"></app-update>
+</div>
