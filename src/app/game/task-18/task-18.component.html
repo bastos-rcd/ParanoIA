@@ -1,0 +1,20 @@
+<div class="w-[80vw] h-auto bg-neutral-600 rounded-lg flex flex-col justify-center items-center mt-20 mx-[10%] p-4">
+    <h1 class="{{ color }}">
+        {{ status }}
+    </h1>
+    <div class="w-full flex flex-row flex-nowrap justify-around mt-4">
+        <div class="h-[100px] w-[75px] flex flex-row justify-center items-center text-center bg-white rounded-lg"
+            style="text-align: center; height: 100px; width: 75px;">
+            {{ temp }}°C
+        </div>
+        <div class="flex flex-col justify-center items-center">
+            <button type="button" class="w-[50px] h-[50px] bg-neutral-400 rounded-lg" (click)="onClickUp()">
+                <i class="fa-solid fa-temperature-arrow-up fa-2xl"></i>
+            </button>
+            <button type="button" class="w-[50px] h-[50px] bg-neutral-400 rounded-lg" (click)="onClickDown()">
+                <i class="fa-solid fa-temperature-arrow-down fa-2xl"></i>
+            </button>
+        </div>
+    </div>
+    <app-update *ngIf="isWin" [numTask]="numTask"></app-update>
+</div>
