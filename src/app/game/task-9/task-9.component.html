@@ -1,0 +1,10 @@
+<div class="w-[80vw] h-auto bg-neutral-600 rounded-lg flex flex-col justify-center items-center mt-20 mx-[10%] p-4">
+    <h1 class="text-white bg-green-400 rounded-lg px-2 mt-4">
+        {{ value }}%
+    </h1>
+    <div class="w-full bg-sky-400 rounded-lg flex p-2 mt-4">
+        <input type="range" class="w-full" id="customRange1" [value]="value" [disabled]="value === 100"
+            (input)="onChangeValue($event)">
+    </div>
+    <app-update *ngIf="value === 100" [numTask]="numTask"></app-update>
+</div>
