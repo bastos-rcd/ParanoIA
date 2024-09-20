@@ -1,0 +1,19 @@
+<div class="w-[80vw] h-auto bg-neutral-600 rounded-lg flex flex-col justify-center items-center mt-20 mx-[10%] p-4">
+    <div class="w-full flex flex-col">
+        <div class="w-full flex flex-row flex-nowrap">
+            <button class="w-[45px] h-[45px] {{ status[5] }}" (click)="onClick(6)" [disabled]="isWin">6</button>
+            <button class="w-[45px] h-[45px] {{ status[0] }}" (click)="onClick(1)" [disabled]="isWin">1</button>
+            <button class="w-[45px] h-[45px] {{ status[8] }}" (click)="onClick(9)" [disabled]="isWin">9</button>
+            <button class="w-[45px] h-[45px] {{ status[6] }}" (click)="onClick(7)" [disabled]="isWin">7</button>
+            <button class="w-[45px] h-[45px] {{ status[3] }}" (click)="onClick(4)" [disabled]="isWin">4</button>
+        </div>
+        <div class="w-full flex flex-row flex-nowrap">
+            <button class="w-[45px] h-[45px] {{ status[1] }}" (click)="onClick(2)" [disabled]="isWin">2</button>
+            <button class="w-[45px] h-[45px] {{ status[7] }}" (click)="onClick(8)" [disabled]="isWin">8</button>
+            <button class="w-[45px] h-[45px] {{ status[4] }}" (click)="onClick(5)" [disabled]="isWin">5</button>
+            <button class="w-[45px] h-[45px] {{ status[2] }}" (click)="onClick(3)" [disabled]="isWin">3</button>
+            <button class="w-[45px] h-[45px] {{ status[9] }}" (click)="onClick(10)" [disabled]="isWin">10</button>
+        </div>
+    </div>
+    <app-update *ngIf="isWin" [numTask]="numTask"></app-update>
+</div>
