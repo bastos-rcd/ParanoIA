@@ -1,0 +1,7 @@
+<div class="w-[80vw] h-auto bg-neutral-600 rounded-lg flex flex-col justify-center items-center mt-20 mx-[10%] p-4">
+    <h1 class="text-white text-base mt-4">
+        {{ firstNumber }} x {{ secondNumber }} = ?
+    </h1>
+    <input *ngIf="!isWin" type="number" class="w-1/2 rounded-lg py-1 px-2 mt-2" (keyup)="onKeyUp($event)">
+    <app-update *ngIf="isWin" [numTask]="numTask"></app-update>
+</div>
