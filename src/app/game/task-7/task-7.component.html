@@ -1,0 +1,39 @@
+<div class="w-[80vw] h-auto bg-neutral-600 rounded-lg flex flex-col justify-center items-center mt-20 mx-[10%] p-4">
+    <h1 class="text-white px-2">
+        Tu es : <i class="fa-regular fa-circle fa-xl" style="color: #FFD43B;"></i>
+    </h1>
+    <div class="w-full flex flex-col justify-center items-center mt-4">
+        <div class="w-full flex flex-row flex-nowrap justify-center">
+            <button type="button" class="w-[70px] h-[70px] border border-white rounded-lg" [disabled]="true">
+                <i *ngIf="circle1" class="fa-solid fa-xmark fa-2xl" style="color: #63E6BE;"></i>
+            </button>
+            <button type="button" class="w-[70px] h-[70px] border border-white rounded-lg" [disabled]="true"></button>
+            <button type="button" class="w-[70px] h-[70px] border border-white rounded-lg" [disabled]="true">
+                <i class="fa-regular fa-circle fa-2xl" style="color: #FFD43B;"></i>
+            </button>
+        </div>
+        <div class="w-full flex flex-row flex-nowrap justify-center">
+            <button type="button" class="w-[70px] h-[70px] border border-white rounded-lg" [disabled]="true">
+                <i class="fa-solid fa-xmark fa-2xl" style="color: #63E6BE;"></i>
+            </button>
+            <button type="button" class="w-[70px] h-[70px] border border-white rounded-lg" [disabled]="circle1"
+                (click)="onClickCircle1()">
+                <i *ngIf="circle1" class="fa-regular fa-circle fa-2xl" style="color: #FFD43B;"></i>
+            </button>
+            <button type="button" class="w-[70px] h-[70px] border border-white rounded-lg" [disabled]="true">
+                <i class="fa-solid fa-xmark fa-2xl" style="color: #63E6BE;"></i>
+            </button>
+        </div>
+        <div class="w-full flex flex-row flex-nowrap justify-center">
+            <button type="button" class="w-[70px] h-[70px] border border-white rounded-lg" [disabled]="!circle1"
+                (click)="onClickCircle2()">
+                <i *ngIf="circle2" class="fa-regular fa-circle fa-2xl" style="color: #FFD43B;"></i>
+            </button>
+            <button type="button" class="w-[70px] h-[70px] border border-white rounded-lg" [disabled]="true"></button>
+            <button type="button" class="w-[70px] h-[70px] border border-white rounded-lg" [disabled]="true">
+                <i class="fa-regular fa-circle fa-2xl" style="color: #FFD43B;"></i>
+            </button>
+        </div>
+    </div>
+    <app-update *ngIf="isWin" [numTask]="numTask"></app-update>
+</div>
