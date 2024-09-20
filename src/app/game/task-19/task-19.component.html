@@ -1,0 +1,32 @@
+<div class="w-[80vw] h-auto bg-neutral-600 rounded-lg flex flex-col justify-center items-center mt-20 mx-[10%] p-4">
+    <form #myForm="ngForm" novalidate>
+        <div class="mb-5">
+            <label for="nom" class="mb-2 text-sm font-medium text-neutral-400">Nom</label>
+            <input type="text" id="nom" name="nom"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5"
+                [(ngModel)]="nom" #usernameModel="ngModel" required pattern="[a-zA-Z0-9_]{3,15}" />
+        </div>
+        <div class="mb-5">
+            <label for="prenom" class="block mb-2 text-sm font-medium text-neutral-400">Prénom</label>
+            <input type="text" id="prenom" name="prenom" [(ngModel)]="prenom" #prenomModel="ngModel" required
+                pattern="[a-zA-Z0-9_]{3,15}"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5" />
+        </div>
+        <div class="mb-5">
+            <label for="date" class="block mb-2 text-sm font-medium text-neutral-400">Date de naissance</label>
+            <input type="date" id="date" name="date" [(ngModel)]="date" #dateModel="ngModel" required
+                pattern="[a-zA-Z0-9_]{3,15}"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5" />
+        </div>
+        <div class="mb-5">
+            <label for="sexe" class="block mb-2 text-sm font-medium text-neutral-400">Sexe</label>
+            <select id="sexe" name="sexe"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5"
+                [(ngModel)]="sexe" #sexeModel="ngModel" required>
+                <option value="M">Masculin</option>
+                <option value="F">Féminin</option>
+            </select>
+        </div>
+    </form>
+    <app-update *ngIf="isWin()" [numTask]="numTask"></app-update>
+</div>
