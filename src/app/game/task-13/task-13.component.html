@@ -1,0 +1,15 @@
+<div class="w-[80vw] h-auto bg-neutral-600 rounded-lg flex flex-col justify-center items-center mt-20 mx-[10%] p-4">
+    <div class="w-full flex flex-row flex-nowrap justify-between">
+        <button type="button" class="w-[30px] h-[30px] {{ status[0] }} rounded-lg" (click)="onClick(1)"
+            [disabled]="isWin"></button>
+        <button type="button" class="w-[30px] h-[30px] {{ status[1] }} rounded-lg" (click)="onClick(2)"
+            [disabled]="isWin"></button>
+        <button type="button" class="w-[30px] h-[30px] {{ status[2] }} rounded-lg" (click)="onClick(3)"
+            [disabled]="isWin"></button>
+        <button type="button" class="w-[30px] h-[30px] {{ status[3] }} rounded-lg" (click)="onClick(4)"
+            [disabled]="isWin"></button>
+        <button type="button" class="w-[30px] h-[30px] {{ status[4] }} rounded-lg" (click)="onClick(5)"
+            [disabled]="isWin"></button>
+    </div>
+    <app-update *ngIf="isWin" [numTask]="numTask"></app-update>
+</div>
