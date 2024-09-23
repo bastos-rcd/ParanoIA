@@ -2,11 +2,13 @@ export class User {
     private name: string;
     private role: boolean;
     private tasks: string;
+    private eliminated: boolean = false;
 
-    constructor(name: string, role: boolean, tasks: string) {
+    constructor(name: string, role: boolean, tasks: string, eliminated: boolean) {
         this.name = name;
         this.role = role;
         this.tasks = tasks;
+        this.eliminated = eliminated;
     }
 
     public getName(): string {
@@ -31,5 +33,13 @@ export class User {
 
     public setTasks(tasks: string[]): void {
         this.tasks = tasks.join('-');
+    }
+
+    public getEliminated(): boolean {
+        return this.eliminated;
+    }
+
+    public setEliminated(): void {
+        this.eliminated = true;
     }
 }

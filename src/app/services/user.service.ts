@@ -28,6 +28,10 @@ export class UserService {
     });
   }
 
+  public setEliminated(name: string): void {
+    this.db.object("users/" + name + "/eliminated").set(true);
+  }
+
   public removeTask(name: string, task: number) {
     const user = this.db.object("users/" + name + "/tasks");
 

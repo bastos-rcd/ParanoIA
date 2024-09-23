@@ -1,0 +1,9 @@
+<div class="w-[100vw] h-auto flex flex-row justify-center items-center mt-20">
+    <div
+        class="w-[300px] h-[300px] bg-[url('/skeleton.jpg')] bg-cover bg-top flex flex-row justify-end items-center rounded-xl">
+        <select class="w-[100px] text-sm bg-white mt-32 mr-12" (change)="onSelect($event)">
+            <option></option>
+            <option *ngFor="let user of users" [value]="user.getName()">{{ user.getName() }}</option>
+        </select>
+    </div>
+</div>

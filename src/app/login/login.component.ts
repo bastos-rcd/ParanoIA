@@ -30,7 +30,7 @@ export class LoginComponent {
 
   ngOnInit(): void {
     this.userService.getUsers().subscribe(data => {
-      this.users = data.map(user => new User(user.name, user.role, user.tasks));
+      this.users = data.map(user => new User(user.name, user.role, user.tasks, user.eliminated));
     });
   }
 

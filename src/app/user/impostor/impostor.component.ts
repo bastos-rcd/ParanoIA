@@ -15,7 +15,7 @@ import { UserService } from '../../services/user.service';
 
 export class ImpostorComponent {
   @Input()
-  public user: User = new User("", false, "");
+  public user: User = new User("", false, "", false);
 
   public impostors: User[] = []
 
@@ -28,7 +28,7 @@ export class ImpostorComponent {
       this.impostors = [];
       users.forEach(user => {
         if (user.name !== this.user.getName() && user.role === true) {
-          this.impostors.push(new User(user.name, user.role, user.tasks));
+          this.impostors.push(new User(user.name, user.role, user.tasks, user.eliminated));
         }
       });
     });

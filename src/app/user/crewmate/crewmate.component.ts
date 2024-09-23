@@ -14,7 +14,7 @@ import { CommonModule } from '@angular/common';
 
 export class CrewmateComponent {
   @Input()
-  public user: User = new User("", false, "");
+  public user: User = new User("", false, "", false);
 
   constructor() { }
 }

@@ -86,7 +86,7 @@ export class NewGameComponent {
   }
 
   public onSubmit() {
-    this.users = this.usersName.split(':').map(name => new User(name, false, ""));
+    this.users = this.usersName.split(':').map(name => new User(name, false, "", false));
 
     this.setImpostors();
     this.setTasks();

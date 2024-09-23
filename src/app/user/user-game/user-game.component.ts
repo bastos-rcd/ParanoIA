@@ -25,7 +25,7 @@ import { ImpostorComponent } from '../impostor/impostor.component';
 export class UserGameComponent {
   public isShowing: boolean = false;
 
-  public user: User = new User("", false, "");
+  public user: User = new User("", false, "", false);
 
   constructor(
     private router: Router,
@@ -38,7 +38,7 @@ export class UserGameComponent {
     }
 
     this.userService.getUser(localStorage.getItem('name')!).subscribe(user => {
-      this.user = new User(user.name, user.role, user.tasks);
+      this.user = new User(user.name, user.role, user.tasks, user.eliminated);
     });
   }
 

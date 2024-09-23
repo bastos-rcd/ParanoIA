@@ -82,7 +82,7 @@ export class TaskComponent {
 
   public numTask: number = 0;
 
-  public user: User = new User("", false, "");
+  public user: User = new User("", false, "", false);
 
   constructor(
     private router: Router,
@@ -96,7 +96,7 @@ export class TaskComponent {
     }
 
     this.userService.getUser(localStorage.getItem('name')!).subscribe(user => {
-      this.user = new User(user.name, user.role, user.tasks);
+      this.user = new User(user.name, user.role, user.tasks, user.eliminated);
     });
 
     this.numTask = parseInt(this.route.snapshot.paramMap.get('id')!);
