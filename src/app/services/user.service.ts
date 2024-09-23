@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { Observable } from 'rxjs';
+import { User } from '../models/user';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +18,14 @@ export class UserService {
 
   public getUsers(): Observable<any[]> {
     return this.db.list("users").valueChanges();
+  }
+
+  public setUsers(users: User[]): void {
+    this.db.object("users").remove().then(() => {
+      users.forEach(user => {
+        this.db.object("users/" + user.getName()).set(user);
+      });
+    });
   }
 
   public removeTask(name: string, task: number) {

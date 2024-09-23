@@ -16,6 +16,10 @@ export class GameService {
     return this.db.object("game").valueChanges();
   }
 
+  public setGame(game: Game): void {
+    this.db.object("game").set(game);
+  }
+
   public updateGame() {
     const game = this.db.object("game");
 
