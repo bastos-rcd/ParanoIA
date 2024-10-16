@@ -42,7 +42,7 @@ To get started with the project, follow these steps:
    ```
 4. **Start the project**
    ```bash
-   npm run dev
+   npm run start
    ```
 
 ## 📝 License
