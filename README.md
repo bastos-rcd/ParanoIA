@@ -2,8 +2,6 @@
 
 🎮 **ParanoIA** is a web application that allows you to play **Among Us** in real life! Gather your friends and experience the thrill of the game in a physical setting.
 
----
-
 ## 🚀 About
 
 ParanoIA transforms the popular game **Among Us** into a real-life experience. Players take on different roles, complete tasks, and engage in social deduction to find the impostor among them. This project aims to bring the fun of digital gaming into the physical world.
